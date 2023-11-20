@@ -1,0 +1,319 @@
+C:\Users\shubh>mysql -uroot -pNokia@6600 -DDay_1
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 25
+Server version: 8.0.34 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create table Dept(DeptId int primary key, DeptName varchar(10));create table emp(eid int,ename varchar(10),DeptId int, Foreign key fk1 (DeptId) references Dept(DeptId));
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> insert into Dept(DeptId,DeptName)values(1,"HR"),(2,"IT"),(3,"Finance"),(4,"OPR");
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> create table Dept(DeptId int primary key, DeptName varchar(10));create table emp(eid int,ename varchar(10),salry int,DeptId int, Foreign key fk1 (DeptId) references Dept(DeptId));
+ERROR 1050 (42S01): Table 'dept' already exists
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> create table emp(eid int,ename varchar(10),salry int,DeptId int, Foreign key fk1 (DeptId) references Dept(DeptId));
+ERROR 1050 (42S01): Table 'emp' already exists
+mysql> insert into emp values (1,'a',1000,1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (2,'b' , 1023 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (3,'c' , 23 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (4,'d' , 123 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (5,'e' , 102 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (6,'f' , 2023 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (7,'g' , 323 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (8,'h' , 523 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (9,'i' , 136 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (10,'j', 627 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (11,'k' , 978 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (12,'l' , 222 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (13,'m' , 746 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (14,'n' , 3223 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (15,'o' , 1999 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (16,'p' , 821 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (17,'q' , 324 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (18,'r' , 546 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (19,'s' , 717 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (20,'t' , 817 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (21,'u' , 888 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (22,'v' , 9029 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (23,'w' , 20001 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (24,'x' , 28222 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (25,'y' , 19212 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (26,'z' , 12111 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (27,'a1' , 3211 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (28,'a2' , 9238 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (29,'a3' , 653 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (30,'a4' , 44 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (31,'a5' , 3 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (32,'a6' , 16 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (33,'a7' , 14 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (34,'a8' , 845 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (35,'a9' , 135 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (36,'b1' , 1212 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (37,'b2' , 1242 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (38,'b3' , 4212 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (39,'b4' , 4444 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (40,'b5' , 555 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (41,'b6' , 1553 , 3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (42,'b7' , 6432 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (43,'b8' , 4532 , 2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (44,'b9' , 3355 , 1);
+Query OK, 1 row affected (0.00 sec)
+
+mysql>    insert into emp values (45,'c1' , 2324 , 2);
+Query OK, 1 row affected (0.00 sec)
+------------------------------------------------------------------------------------------------------------------------------------------1st
+
+mysql> select * from emp where salry between 500 and 1300;
++------+-------+-------+--------+
+| eid  | ename | salry | DeptId |
++------+-------+-------+--------+
+|    1 | a     |  1000 |      1 |
+|    2 | b     |  1023 |      2 |
+|    8 | h     |   523 |      2 |
+|   10 | j     |   627 |      1 |
+|   11 | k     |   978 |      3 |
+|   13 | m     |   746 |      1 |
+|   16 | p     |   821 |      3 |
+|   18 | r     |   546 |      3 |
+|   19 | s     |   717 |      2 |
+|   20 | t     |   817 |      2 |
+|   21 | u     |   888 |      3 |
+|   29 | a3    |   653 |      3 |
+|   34 | a8    |   845 |      1 |
+|   36 | b1    |  1212 |      1 |
+|   37 | b2    |  1242 |      2 |
+|   40 | b5    |   555 |      1 |
++------+-------+-------+--------+
+16 rows in set (0.00 sec)
+------------------------------------------------------------------------------------------------------------------------------------------
+2nd
+
+mysql> select e.ename,deptName from Dept, emp as e where e.DeptId=Dept.DeptId and DeptName="HR";
++-------+----------+
+| ename | deptName |
++-------+----------+
+| a     | HR       |
+| e     | HR       |
+| g     | HR       |
+| i     | HR       |
+| j     | HR       |
+| l     | HR       |
+| m     | HR       |
+| n     | HR       |
+| q     | HR       |
+| v     | HR       |
+| x     | HR       |
+| z     | HR       |
+| a1    | HR       |
+| a2    | HR       |
+| a4    | HR       |
+| a6    | HR       |
+| a8    | HR       |
+| b1    | HR       |
+| b5    | HR       |
+| b7    | HR       |
+| b9    | HR       |
++-------+----------+
+21 rows in set (0.00 sec)
+------------------------------------------------------------------------------------------------------------------------------------------
+3rd
+mysql> Select deptname,count(eid) emp_count
+    -> From emp e right join dept d
+    -> On e.deptid=d.deptid
+    -> Group by deptname;
++----------+-----------+
+| deptname | emp_count |
++----------+-----------+
+| HR       |        21 |
+| IT       |        10 |
+| Finance  |        14 |
+| OPR      |         0 |
++----------+-----------+
+4 rows in set (0.00 sec)
+------------------------------------------------------------------------------------------------------------------------------------------
+
+4th
+
+mysql> Select ename,DeptName,salry
+    -> From emp join dept
+    -> On emp.Deptid=Dept.Deptid
+    -> Order by salry desc limit 1;
++-------+----------+-------+
+| ename | DeptName | salry |
++-------+----------+-------+
+| x     | HR       | 28222 |
++-------+----------+-------+
+1 row in set (0.00 sec)
+------------------------------------------------------------------------------------------------------------------------------------------
+5th
+
+
+mysql> Select ename,DeptName,salry
+    -> From emp join dept
+    -> On emp.Deptid=Dept.Deptid
+    -> Order by salry asc limit 1;
++-------+----------+-------+
+| ename | DeptName | salry |
++-------+----------+-------+
+| a5    | IT       |     3 |
++-------+----------+-------+
+1 row in set (0.00 sec)
+-----------------------------------------------------------------------------------------------------------------------------------------
+6th
+
+mysql> Select ename,DeptName,salry
+    -> From emp join dept
+    -> On emp.Deptid=Dept.Deptid
+    -> Order by salry desc limit 1 offset 1;
++-------+----------+-------+
+| ename | DeptName | salry |
++-------+----------+-------+
+| w     | Finance  | 20001 |
++-------+----------+-------+
+1 row in set (0.00 sec)
+------------------------------------------------------------------------------------------------------------------------------------------7th
+
+mysql> Select ename,DeptName,salry
+    -> From emp join dept
+    -> On emp.Deptid=Dept.Deptid
+    -> Order by salry desc limit 5;
++-------+----------+-------+
+| ename | DeptName | salry |
++-------+----------+-------+
+| x     | HR       | 28222 |
+| w     | Finance  | 20001 |
+| y     | Finance  | 19212 |
+| z     | HR       | 12111 |
+| a2    | HR       |  9238 |
++-------+----------+-------+
+5 rows in set (0.00 sec)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+9th 
+mysql> Select deptname,avg(emp.salry) as avg_salry
+    -> From emp join dept
+    -> On emp.deptid=dept.deptid
+    -> Group by deptname;
++----------+-----------+
+| deptname | avg_salry |
++----------+-----------+
+| HR       | 3855.8571 |
+| IT       | 1540.7000 |
+| Finance  | 3814.2143 |
++----------+-----------+
+3 rows in set (0.01 sec)
+------------------------------------------------------------------------------------------------------------------------------------------10th
+
+mysql> Select deptname,min(emp.salry) as min_salry,max(emp.salry)as max_salary
+    -> From emp join dept
+    -> On emp.deptid=dept.deptid
+    -> Group by deptname;
++----------+-----------+------------+
+| deptname | min_salry | max_salary |
++----------+-----------+------------+
+| HR       |        16 |      28222 |
+| IT       |         3 |       4532 |
+| Finance  |        23 |      20001 |
++----------+-----------+------------+
+3 rows in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------------------------------
